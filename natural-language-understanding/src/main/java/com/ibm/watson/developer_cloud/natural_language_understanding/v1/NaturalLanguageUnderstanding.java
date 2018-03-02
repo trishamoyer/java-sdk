@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -57,7 +57,7 @@ import com.ibm.watson.developer_cloud.util.Validator;
  * for detected entities, keywords, or user-specified target phrases found in the text.
  *
  * ### Relations
- * Recognize when two entities are related, and identify the type of relation. For example, you can identify an
+ * Recognize when two entities are related, and identify the type of relation.  For example, you can identify an
  * "awardedTo" relation between an award and its recipient.
  *
  * ### Semantic Roles
@@ -68,8 +68,7 @@ import com.ibm.watson.developer_cloud.util.Validator;
  * Get author information, publication date, and the title of your text/HTML content.
  *
  * @version v1
- * @see <a href="http://www.ibm.com/watson/developercloud/natural-language-understanding.html">Natural Language
- *      Understanding</a>
+ * @see <a href="http://www.ibm.com/watson/developercloud/natural-language-understanding.html">Natural Language Understanding</a>
  */
 public class NaturalLanguageUnderstanding extends WatsonService {
 
@@ -80,7 +79,6 @@ public class NaturalLanguageUnderstanding extends WatsonService {
 
   /** The Constant VERSION_DATE_2017_02_27. */
   public static final String VERSION_DATE_2017_02_27 = "2017-02-27";
-
   /**
    * Instantiates a new `NaturalLanguageUnderstanding`.
    *
@@ -103,7 +101,7 @@ public class NaturalLanguageUnderstanding extends WatsonService {
    * Instantiates a new `NaturalLanguageUnderstanding` with username and password.
    *
    * @param versionDate The version date (yyyy-MM-dd) of the REST API to use. Specifying this value will keep your API
-   *          calls from failing when the service introduces breaking changes.
+   *        calls from failing when the service introduces breaking changes.
    * @param username the username
    * @param password the password
    */
@@ -175,8 +173,7 @@ public class NaturalLanguageUnderstanding extends WatsonService {
   /**
    * List models.
    *
-   * Lists available models for Relations and Entities features, including Watson Knowledge Studio custom models that
-   * you have created and linked to your Natural Language Understanding service.
+   * Lists available models for Relations and Entities features, including Watson Knowledge Studio custom models that you have created and linked to your Natural Language Understanding service.
    *
    * @param listModelsOptions the {@link ListModelsOptions} containing the options for the call
    * @return a {@link ServiceCall} with a response type of {@link ListModelsResults}
@@ -192,8 +189,7 @@ public class NaturalLanguageUnderstanding extends WatsonService {
   /**
    * List models.
    *
-   * Lists available models for Relations and Entities features, including Watson Knowledge Studio custom models that
-   * you have created and linked to your Natural Language Understanding service.
+   * Lists available models for Relations and Entities features, including Watson Knowledge Studio custom models that you have created and linked to your Natural Language Understanding service.
    *
    * @return a {@link ServiceCall} with a response type of {@link ListModelsResults}
    */
