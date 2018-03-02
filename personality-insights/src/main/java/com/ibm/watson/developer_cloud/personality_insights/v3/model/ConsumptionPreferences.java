@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -28,8 +28,7 @@ public class ConsumptionPreferences extends GenericModel {
   /**
    * Gets the consumptionPreferenceId.
    *
-   * The unique identifier of the consumption preference to which the results pertain. IDs have the form
-   * `consumption_preferences_{preference}`.
+   * The unique identifier of the consumption preference to which the results pertain. IDs have the form `consumption_preferences_{preference}`.
    *
    * @return the consumptionPreferenceId
    */
@@ -51,9 +50,7 @@ public class ConsumptionPreferences extends GenericModel {
   /**
    * Gets the score.
    *
-   * The score for the consumption preference: * `0.0`: Unlikely * `0.5`: Neutral * `1.0`: Likely The scores for some
-   * preferences are binary and do not allow a neutral value. The score is an indication of preference based on the
-   * results inferred from the input text, not a normalized percentile.
+   * The score for the consumption preference: * `0.0`: Unlikely * `0.5`: Neutral * `1.0`: Likely   The scores for some preferences are binary and do not allow a neutral value. The score is an indication of preference based on the results inferred from the input text, not a normalized percentile.
    *
    * @return the score
    */
@@ -88,3 +85,4 @@ public class ConsumptionPreferences extends GenericModel {
     this.score = score;
   }
 }
+

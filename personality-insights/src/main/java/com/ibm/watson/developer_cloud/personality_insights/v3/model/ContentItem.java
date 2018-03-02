@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -21,8 +21,7 @@ import com.ibm.watson.developer_cloud.util.Validator;
 public class ContentItem extends GenericModel {
 
   /**
-   * MIME type of the content. The default is plain text. The tags are stripped from HTML content before it is analyzed;
-   * plain text is processed as submitted.
+   * MIME type of the content. The default is plain text. The tags are stripped from HTML content before it is analyzed; plain text is processed as submitted.
    */
   public interface Contenttype {
     /** text/plain. */
@@ -32,12 +31,7 @@ public class ContentItem extends GenericModel {
   }
 
   /**
-   * Language identifier (two-letter ISO 639-1 identifier) for the language of the content item. The default is `en`
-   * (English). Regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. A
-   * language specified with the `Content-Type` header overrides the value of this parameter; any content items that
-   * specify a different language are ignored. Omit the `Content-Type` header to base the language on the most prevalent
-   * specification among the content items; again, content items that specify a different language are ignored. You can
-   * specify any combination of languages for the input and response content.
+   * Language identifier (two-letter ISO 639-1 identifier) for the language of the content item. The default is `en` (English). Regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. A language specified with the `Content-Type` header overrides the value of this parameter; any content items that specify a different language are ignored. Omit the `Content-Type` header to base the language on the most prevalent specification among the content items; again, content items that specify a different language are ignored. You can specify any combination of languages for the input and response content.
    */
   public interface Language {
     /** ar. */
@@ -259,8 +253,7 @@ public class ContentItem extends GenericModel {
   /**
    * Gets the created.
    *
-   * Timestamp that identifies when this content was created. Specify a value in milliseconds since the UNIX Epoch
-   * (January 1, 1970, at 0:00 UTC). Required only for results that include temporal behavior data.
+   * Timestamp that identifies when this content was created. Specify a value in milliseconds since the UNIX Epoch (January 1, 1970, at 0:00 UTC). Required only for results that include temporal behavior data.
    *
    * @return the created
    */
@@ -271,8 +264,7 @@ public class ContentItem extends GenericModel {
   /**
    * Gets the updated.
    *
-   * Timestamp that identifies when this content was last updated. Specify a value in milliseconds since the UNIX Epoch
-   * (January 1, 1970, at 0:00 UTC). Required only for results that include temporal behavior data.
+   * Timestamp that identifies when this content was last updated. Specify a value in milliseconds since the UNIX Epoch (January 1, 1970, at 0:00 UTC). Required only for results that include temporal behavior data.
    *
    * @return the updated
    */
@@ -283,8 +275,7 @@ public class ContentItem extends GenericModel {
   /**
    * Gets the contenttype.
    *
-   * MIME type of the content. The default is plain text. The tags are stripped from HTML content before it is analyzed;
-   * plain text is processed as submitted.
+   * MIME type of the content. The default is plain text. The tags are stripped from HTML content before it is analyzed; plain text is processed as submitted.
    *
    * @return the contenttype
    */
@@ -295,12 +286,7 @@ public class ContentItem extends GenericModel {
   /**
    * Gets the language.
    *
-   * Language identifier (two-letter ISO 639-1 identifier) for the language of the content item. The default is `en`
-   * (English). Regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. A
-   * language specified with the `Content-Type` header overrides the value of this parameter; any content items that
-   * specify a different language are ignored. Omit the `Content-Type` header to base the language on the most prevalent
-   * specification among the content items; again, content items that specify a different language are ignored. You can
-   * specify any combination of languages for the input and response content.
+   * Language identifier (two-letter ISO 639-1 identifier) for the language of the content item. The default is `en` (English). Regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. A language specified with the `Content-Type` header overrides the value of this parameter; any content items that specify a different language are ignored. Omit the `Content-Type` header to base the language on the most prevalent specification among the content items; again, content items that specify a different language are ignored. You can specify any combination of languages for the input and response content.
    *
    * @return the language
    */
@@ -311,8 +297,7 @@ public class ContentItem extends GenericModel {
   /**
    * Gets the parentid.
    *
-   * Unique ID of the parent content item for this item. Used to identify hierarchical relationships between
-   * posts/replies, messages/replies, and so on.
+   * Unique ID of the parent content item for this item. Used to identify hierarchical relationships between posts/replies, messages/replies, and so on.
    *
    * @return the parentid
    */
@@ -342,3 +327,4 @@ public class ContentItem extends GenericModel {
     return forward;
   }
 }
+

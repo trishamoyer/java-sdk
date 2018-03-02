@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -62,8 +62,7 @@ public class Behavior extends GenericModel {
   /**
    * Gets the percentage.
    *
-   * For JSON content that is timestamped, the percentage of timestamped input data that occurred during that day of the
-   * week or hour of the day. The range is 0 to 1.
+   * For JSON content that is timestamped, the percentage of timestamped input data that occurred during that day of the week or hour of the day. The range is 0 to 1.
    *
    * @return the percentage
    */
@@ -107,3 +106,4 @@ public class Behavior extends GenericModel {
     this.percentage = percentage;
   }
 }
+

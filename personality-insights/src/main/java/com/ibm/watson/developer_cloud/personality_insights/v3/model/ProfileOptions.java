@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -21,8 +21,7 @@ import com.ibm.watson.developer_cloud.util.Validator;
 public class ProfileOptions extends GenericModel {
 
   /**
-   * The type of the input: application/json, text/html, or text/plain. A character encoding can be specified by
-   * including a `charset` parameter. For example, 'text/html;charset=utf-8'.
+   * The type of the input: application/json, text/html, or text/plain. A character encoding can be specified by including a `charset` parameter. For example, 'text/html;charset=utf-8'.
    */
   public interface ContentType {
     /** application/json. */
@@ -34,14 +33,7 @@ public class ProfileOptions extends GenericModel {
   }
 
   /**
-   * The language of the input text for the request: Arabic, English, Japanese, Korean, or Spanish. Regional variants
-   * are treated as their parent language; for example, `en-US` is interpreted as `en`. The effect of the
-   * `Content-Language` header depends on the `Content-Type` header. When `Content-Type` is `text/plain` or `text/html`,
-   * `Content-Language` is the only way to specify the language. When `Content-Type` is `application/json`,
-   * `Content-Language` overrides a language specified with the `language` parameter of a `ContentItem` object, and
-   * content items that specify a different language are ignored; omit this header to base the language on the
-   * specification of the content items. You can specify any combination of languages for `Content-Language` and
-   * `Accept-Language`.
+   * The language of the input text for the request: Arabic, English, Japanese, Korean, or Spanish. Regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. The effect of the `Content-Language` header depends on the `Content-Type` header. When `Content-Type` is `text/plain` or `text/html`, `Content-Language` is the only way to specify the language. When `Content-Type` is `application/json`, `Content-Language` overrides a language specified with the `language` parameter of a `ContentItem` object, and content items that specify a different language are ignored; omit this header to base the language on the specification of the content items. You can specify any combination of languages for `Content-Language` and `Accept-Language`.
    */
   public interface ContentLanguage {
     /** ar. */
@@ -57,9 +49,7 @@ public class ProfileOptions extends GenericModel {
   }
 
   /**
-   * The desired language of the response. For two-character arguments, regional variants are treated as their parent
-   * language; for example, `en-US` is interpreted as `en`. You can specify any combination of languages for the input
-   * and response content.
+   * The desired language of the response. For two-character arguments, regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. You can specify any combination of languages for the input and response content.
    */
   public interface AcceptLanguage {
     /** ar. */
@@ -92,6 +82,7 @@ public class ProfileOptions extends GenericModel {
   private String contentLanguage;
   private String acceptLanguage;
   private Boolean rawScores;
+  private Boolean csvHeaders;
   private Boolean consumptionPreferences;
 
   /**
@@ -104,6 +95,7 @@ public class ProfileOptions extends GenericModel {
     private String contentLanguage;
     private String acceptLanguage;
     private Boolean rawScores;
+    private Boolean csvHeaders;
     private Boolean consumptionPreferences;
 
     private Builder(ProfileOptions profileOptions) {
@@ -113,6 +105,7 @@ public class ProfileOptions extends GenericModel {
       contentLanguage = profileOptions.contentLanguage;
       acceptLanguage = profileOptions.acceptLanguage;
       rawScores = profileOptions.rawScores;
+      csvHeaders = profileOptions.csvHeaders;
       consumptionPreferences = profileOptions.consumptionPreferences;
     }
 
@@ -161,6 +154,17 @@ public class ProfileOptions extends GenericModel {
      */
     public Builder rawScores(Boolean rawScores) {
       this.rawScores = rawScores;
+      return this;
+    }
+
+    /**
+     * Set the csvHeaders.
+     *
+     * @param csvHeaders the csvHeaders
+     * @return the ProfileOptions builder
+     */
+    public Builder csvHeaders(Boolean csvHeaders) {
+      this.csvHeaders = csvHeaders;
       return this;
     }
 
@@ -220,6 +224,7 @@ public class ProfileOptions extends GenericModel {
     contentLanguage = builder.contentLanguage;
     acceptLanguage = builder.acceptLanguage;
     rawScores = builder.rawScores;
+    csvHeaders = builder.csvHeaders;
     consumptionPreferences = builder.consumptionPreferences;
   }
 
@@ -235,9 +240,7 @@ public class ProfileOptions extends GenericModel {
   /**
    * Gets the content.
    *
-   * A maximum of 20 MB of content to analyze, though the service requires much less text; for more information, see
-   * [Providing sufficient input](https://console.bluemix.net/docs/services/personality-insights/input.html#sufficient).
-   * A JSON request must conform to the `Content` model.
+   * A maximum of 20 MB of content to analyze, though the service requires much less text; for more information, see [Providing sufficient input](https://console.bluemix.net/docs/services/personality-insights/input.html#sufficient). A JSON request must conform to the `Content` model.
    *
    * @return the content
    */
@@ -248,9 +251,7 @@ public class ProfileOptions extends GenericModel {
   /**
    * Gets the body.
    *
-   * A maximum of 20 MB of content to analyze, though the service requires much less text; for more information, see
-   * [Providing sufficient input](https://console.bluemix.net/docs/services/personality-insights/input.html#sufficient).
-   * A JSON request must conform to the `Content` model.
+   * A maximum of 20 MB of content to analyze, though the service requires much less text; for more information, see [Providing sufficient input](https://console.bluemix.net/docs/services/personality-insights/input.html#sufficient). A JSON request must conform to the `Content` model.
    *
    * @return the body
    */
@@ -261,8 +262,7 @@ public class ProfileOptions extends GenericModel {
   /**
    * Gets the contentType.
    *
-   * The type of the input: application/json, text/html, or text/plain. A character encoding can be specified by
-   * including a `charset` parameter. For example, 'text/html;charset=utf-8'.
+   * The type of the input: application/json, text/html, or text/plain. A character encoding can be specified by including a `charset` parameter. For example, 'text/html;charset=utf-8'.
    *
    * @return the contentType
    */
@@ -273,14 +273,7 @@ public class ProfileOptions extends GenericModel {
   /**
    * Gets the contentLanguage.
    *
-   * The language of the input text for the request: Arabic, English, Japanese, Korean, or Spanish. Regional variants
-   * are treated as their parent language; for example, `en-US` is interpreted as `en`. The effect of the
-   * `Content-Language` header depends on the `Content-Type` header. When `Content-Type` is `text/plain` or `text/html`,
-   * `Content-Language` is the only way to specify the language. When `Content-Type` is `application/json`,
-   * `Content-Language` overrides a language specified with the `language` parameter of a `ContentItem` object, and
-   * content items that specify a different language are ignored; omit this header to base the language on the
-   * specification of the content items. You can specify any combination of languages for `Content-Language` and
-   * `Accept-Language`.
+   * The language of the input text for the request: Arabic, English, Japanese, Korean, or Spanish. Regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. The effect of the `Content-Language` header depends on the `Content-Type` header. When `Content-Type` is `text/plain` or `text/html`, `Content-Language` is the only way to specify the language. When `Content-Type` is `application/json`, `Content-Language` overrides a language specified with the `language` parameter of a `ContentItem` object, and content items that specify a different language are ignored; omit this header to base the language on the specification of the content items. You can specify any combination of languages for `Content-Language` and `Accept-Language`.
    *
    * @return the contentLanguage
    */
@@ -291,9 +284,7 @@ public class ProfileOptions extends GenericModel {
   /**
    * Gets the acceptLanguage.
    *
-   * The desired language of the response. For two-character arguments, regional variants are treated as their parent
-   * language; for example, `en-US` is interpreted as `en`. You can specify any combination of languages for the input
-   * and response content.
+   * The desired language of the response. For two-character arguments, regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`. You can specify any combination of languages for the input and response content.
    *
    * @return the acceptLanguage
    */
@@ -304,8 +295,7 @@ public class ProfileOptions extends GenericModel {
   /**
    * Gets the rawScores.
    *
-   * If `true`, a raw score in addition to a normalized percentile is returned for each characteristic; raw scores are
-   * not compared with a sample population. If `false` (the default), only normalized percentiles are returned.
+   * If `true`, a raw score in addition to a normalized percentile is returned for each characteristic; raw scores are not compared with a sample population. If `false` (the default), only normalized percentiles are returned.
    *
    * @return the rawScores
    */
@@ -314,10 +304,20 @@ public class ProfileOptions extends GenericModel {
   }
 
   /**
+   * Gets the csvHeaders.
+   *
+   * If `true`, column labels are returned with a CSV response; if `false` (the default), they are not. Applies only when the `Accept` header is set to `text/csv`.
+   *
+   * @return the csvHeaders
+   */
+  public Boolean csvHeaders() {
+    return csvHeaders;
+  }
+
+  /**
    * Gets the consumptionPreferences.
    *
-   * If `true`, information about consumption preferences is returned with the results; if `false` (the default), the
-   * response does not include the information.
+   * If `true`, information about consumption preferences is returned with the results; if `false` (the default), the response does not include the information.
    *
    * @return the consumptionPreferences
    */
@@ -325,3 +325,4 @@ public class ProfileOptions extends GenericModel {
     return consumptionPreferences;
   }
 }
+

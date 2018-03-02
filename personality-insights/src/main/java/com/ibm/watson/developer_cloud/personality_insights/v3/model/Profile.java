@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -77,8 +77,7 @@ public class Profile extends GenericModel {
   /**
    * Gets the wordCountMessage.
    *
-   * When guidance is appropriate, a string that provides a message that indicates the number of words found and where
-   * that value falls in the range of required or suggested number of words.
+   * When guidance is appropriate, a string that provides a message that indicates the number of words found and where that value falls in the range of required or suggested number of words.
    *
    * @return the wordCountMessage
    */
@@ -122,9 +121,7 @@ public class Profile extends GenericModel {
   /**
    * Gets the behavior.
    *
-   * For JSON content that is timestamped, detailed results about the social behavior disclosed by the input in terms of
-   * temporal characteristics. The results include information about the distribution of the content over the days of
-   * the week and the hours of the day.
+   * For JSON content that is timestamped, detailed results about the social behavior disclosed by the input in terms of temporal characteristics. The results include information about the distribution of the content over the days of the week and the hours of the day.
    *
    * @return the behavior
    */
@@ -135,9 +132,7 @@ public class Profile extends GenericModel {
   /**
    * Gets the consumptionPreferences.
    *
-   * If the `consumption_preferences` query parameter is `true`, detailed results for each category of consumption
-   * preferences. Each element of the array provides information inferred from the input text for the individual
-   * preferences of that category.
+   * If the `consumption_preferences` query parameter is `true`, detailed results for each category of consumption preferences. Each element of the array provides information inferred from the input text for the individual preferences of that category.
    *
    * @return the consumptionPreferences
    */
@@ -148,8 +143,7 @@ public class Profile extends GenericModel {
   /**
    * Gets the warnings.
    *
-   * Warning messages associated with the input text submitted with the request. The array is empty if the input
-   * generated no warnings.
+   * Warning messages associated with the input text submitted with the request. The array is empty if the input generated no warnings.
    *
    * @return the warnings
    */
@@ -238,3 +232,4 @@ public class Profile extends GenericModel {
     this.warnings = warnings;
   }
 }
+
