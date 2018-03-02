@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -65,9 +65,7 @@ public class ClassifiedImages extends GenericModel {
   /**
    * Gets the warnings.
    *
-   * Information about what might cause less than optimal output. For example, a request sent with a corrupt .zip file
-   * and a list of image URLs will still complete, but does not return the expected output. Not returned when there is
-   * no warning.
+   * Information about what might cause less than optimal output. For example, a request sent with a corrupt .zip file and a list of image URLs will still complete, but does not return the expected output. Not returned when there is no warning.
    *
    * @return the warnings
    */
@@ -111,3 +109,4 @@ public class ClassifiedImages extends GenericModel {
     this.warnings = warnings;
   }
 }
+
