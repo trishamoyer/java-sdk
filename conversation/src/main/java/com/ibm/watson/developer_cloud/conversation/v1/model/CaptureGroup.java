@@ -12,59 +12,56 @@
  */
 package com.ibm.watson.developer_cloud.conversation.v1.model;
 
-import java.util.Date;
+import java.util.List;
 
 import com.ibm.watson.developer_cloud.service.model.GenericModel;
 
 /**
- * Counterexample.
+ * CaptureGroup.
  */
-public class Counterexample extends GenericModel {
+public class CaptureGroup extends GenericModel {
 
-  private String text;
-  private Date created;
-  private Date updated;
+  private String group;
+  private List<Long> location;
 
   /**
-   * Gets the text.
+   * Gets the group.
    *
-   * The text of the counterexample.
+   * A recognized capture group for the entity.
    *
-   * @return the text
+   * @return the group
    */
-  public String getText() {
-    return text;
+  public String getGroup() {
+    return group;
   }
 
   /**
-   * Gets the created.
+   * Gets the location.
    *
-   * The timestamp for creation of the counterexample.
+   * Zero-based character offsets that indicate where the entity value begins and ends in the input text.
    *
-   * @return the created
+   * @return the location
    */
-  public Date getCreated() {
-    return created;
+  public List<Long> getLocation() {
+    return location;
   }
 
   /**
-   * Gets the updated.
+   * Sets the group.
    *
-   * The timestamp for the last update to the counterexample.
-   *
-   * @return the updated
+   * @param group the new group
    */
-  public Date getUpdated() {
-    return updated;
+  public void setGroup(final String group) {
+    this.group = group;
   }
 
   /**
-   * Sets the text.
+   * Sets the location.
    *
-   * @param text the new text
+   * @param location the new location
    */
-  public void setText(final String text) {
-    this.text = text;
+  public void setLocation(final List<Long> location) {
+    this.location = location;
   }
 }
 
