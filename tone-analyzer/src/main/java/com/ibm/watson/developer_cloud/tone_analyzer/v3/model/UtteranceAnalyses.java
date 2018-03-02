@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -40,8 +40,7 @@ public class UtteranceAnalyses extends GenericModel {
   /**
    * Gets the warning.
    *
-   * **`2017-09-21`:** A warning message if the content contains more than 50 utterances. The service analyzes only the
-   * first 50 utterances. **`2016-05-19`:** Not returned.
+   * **`2017-09-21`:** A warning message if the content contains more than 50 utterances. The service analyzes only the first 50 utterances. **`2016-05-19`:** Not returned.
    *
    * @return the warning
    */
@@ -67,3 +66,4 @@ public class UtteranceAnalyses extends GenericModel {
     this.warning = warning;
   }
 }
+

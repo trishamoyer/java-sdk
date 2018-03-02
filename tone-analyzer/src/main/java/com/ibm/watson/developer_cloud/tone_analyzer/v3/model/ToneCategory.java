@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -42,8 +42,7 @@ public class ToneCategory extends GenericModel {
   /**
    * Gets the categoryId.
    *
-   * The unique, non-localized identifier of the category for the results. The service can return results for the
-   * following category IDs: `emotion_tone`, `language_tone`, and `social_tone`.
+   * The unique, non-localized identifier of the category for the results. The service can return results for the following category IDs: `emotion_tone`, `language_tone`, and `social_tone`.
    *
    * @return the categoryId
    */
@@ -89,3 +88,4 @@ public class ToneCategory extends GenericModel {
     this.categoryName = categoryName;
   }
 }
+

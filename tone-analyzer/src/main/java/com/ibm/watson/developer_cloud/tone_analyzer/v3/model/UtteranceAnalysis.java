@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -23,7 +23,7 @@ import com.ibm.watson.developer_cloud.service.model.GenericModel;
 public class UtteranceAnalysis extends GenericModel {
 
   @SerializedName("utterance_id")
-  private String utteranceId;
+  private Long utteranceId;
   @SerializedName("utterance_text")
   private String utteranceText;
   private List<ToneChatScore> tones;
@@ -32,12 +32,11 @@ public class UtteranceAnalysis extends GenericModel {
   /**
    * Gets the utteranceId.
    *
-   * The unique identifier of the utterance. The first utterance has ID 0, and the ID of each subsequent utterance is
-   * incremented by one.
+   * The unique identifier of the utterance. The first utterance has ID 0, and the ID of each subsequent utterance is incremented by one.
    *
    * @return the utteranceId
    */
-  public String getUtteranceId() {
+  public Long getUtteranceId() {
     return utteranceId;
   }
 
@@ -55,9 +54,7 @@ public class UtteranceAnalysis extends GenericModel {
   /**
    * Gets the tones.
    *
-   * An array of `ToneChatScore` objects that provides results for the most prevalent tones of the utterance. The array
-   * includes results for any tone whose score is at least 0.5. The array is empty if no tone has a score that meets
-   * this threshold.
+   * An array of `ToneChatScore` objects that provides results for the most prevalent tones of the utterance. The array includes results for any tone whose score is at least 0.5. The array is empty if no tone has a score that meets this threshold.
    *
    * @return the tones
    */
@@ -68,8 +65,7 @@ public class UtteranceAnalysis extends GenericModel {
   /**
    * Gets the error.
    *
-   * **`2017-09-21`:** An error message if the utterance contains more than 500 characters. The service does not analyze
-   * the utterance. **`2016-05-19`:** Not returned.
+   * **`2017-09-21`:** An error message if the utterance contains more than 500 characters. The service does not analyze the utterance. **`2016-05-19`:** Not returned.
    *
    * @return the error
    */
@@ -82,7 +78,7 @@ public class UtteranceAnalysis extends GenericModel {
    *
    * @param utteranceId the new utteranceId
    */
-  public void setUtteranceId(final String utteranceId) {
+  public void setUtteranceId(final long utteranceId) {
     this.utteranceId = utteranceId;
   }
 
@@ -113,3 +109,4 @@ public class UtteranceAnalysis extends GenericModel {
     this.error = error;
   }
 }
+
