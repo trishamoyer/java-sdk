@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -31,7 +31,7 @@ public class TranslationResult extends GenericModel {
   /**
    * Gets the wordCount.
    *
-   * Number of words of the complete input text.
+   * Number of words in the input text.
    *
    * @return the wordCount
    */
@@ -42,7 +42,7 @@ public class TranslationResult extends GenericModel {
   /**
    * Gets the characterCount.
    *
-   * Number of characters of the complete input text.
+   * Number of characters in the input text.
    *
    * @return the characterCount
    */
@@ -53,7 +53,7 @@ public class TranslationResult extends GenericModel {
   /**
    * Gets the translations.
    *
-   * List of translation output in UTF-8, corresponding to the list of input text.
+   * List of translation output in UTF-8, corresponding to the input text entries.
    *
    * @return the translations
    */
@@ -88,3 +88,4 @@ public class TranslationResult extends GenericModel {
     this.translations = translations;
   }
 }
+
