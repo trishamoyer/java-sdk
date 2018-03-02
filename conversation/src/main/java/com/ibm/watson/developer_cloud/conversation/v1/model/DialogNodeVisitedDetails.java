@@ -12,59 +12,56 @@
  */
 package com.ibm.watson.developer_cloud.conversation.v1.model;
 
-import java.util.Date;
-
+import com.google.gson.annotations.SerializedName;
 import com.ibm.watson.developer_cloud.service.model.GenericModel;
 
 /**
- * Counterexample.
+ * DialogNodeVisitedDetails.
  */
-public class Counterexample extends GenericModel {
+public class DialogNodeVisitedDetails extends GenericModel {
 
-  private String text;
-  private Date created;
-  private Date updated;
+  @SerializedName("dialog_node")
+  private String dialogNode;
+  private String title;
 
   /**
-   * Gets the text.
+   * Gets the dialogNode.
    *
-   * The text of the counterexample.
+   * A dialog node that was triggered during processing of the input message.
    *
-   * @return the text
+   * @return the dialogNode
    */
-  public String getText() {
-    return text;
+  public String getDialogNode() {
+    return dialogNode;
   }
 
   /**
-   * Gets the created.
+   * Gets the title.
    *
-   * The timestamp for creation of the counterexample.
+   * The title of the dialog node.
    *
-   * @return the created
+   * @return the title
    */
-  public Date getCreated() {
-    return created;
+  public String getTitle() {
+    return title;
   }
 
   /**
-   * Gets the updated.
+   * Sets the dialogNode.
    *
-   * The timestamp for the last update to the counterexample.
-   *
-   * @return the updated
+   * @param dialogNode the new dialogNode
    */
-  public Date getUpdated() {
-    return updated;
+  public void setDialogNode(final String dialogNode) {
+    this.dialogNode = dialogNode;
   }
 
   /**
-   * Sets the text.
+   * Sets the title.
    *
-   * @param text the new text
+   * @param title the new title
    */
-  public void setText(final String text) {
-    this.text = text;
+  public void setTitle(final String title) {
+    this.title = title;
   }
 }
 
