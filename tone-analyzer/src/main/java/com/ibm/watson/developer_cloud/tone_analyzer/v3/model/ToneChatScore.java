@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -29,8 +29,7 @@ public class ToneChatScore extends GenericModel {
   /**
    * Gets the score.
    *
-   * The score for the tone in the range of 0.5 to 1. A score greater than 0.75 indicates a high likelihood that the
-   * tone is perceived in the utterance.
+   * The score for the tone in the range of 0.5 to 1. A score greater than 0.75 indicates a high likelihood that the tone is perceived in the utterance.
    *
    * @return the score
    */
@@ -41,9 +40,7 @@ public class ToneChatScore extends GenericModel {
   /**
    * Gets the toneId.
    *
-   * The unique, non-localized identifier of the tone for the results. The service can return results for the following
-   * tone IDs: `sad`, `frustrated`, `satisfied`, `excited`, `polite`, `impolite`, and `sympathetic`. The service returns
-   * results only for tones whose scores meet a minimum threshold of 0.5.
+   * The unique, non-localized identifier of the tone for the results. The service can return results for the following tone IDs: `sad`, `frustrated`, `satisfied`, `excited`, `polite`, `impolite`, and `sympathetic`. The service returns results only for tones whose scores meet a minimum threshold of 0.5.
    *
    * @return the toneId
    */
@@ -89,3 +86,4 @@ public class ToneChatScore extends GenericModel {
     this.toneName = toneName;
   }
 }
+

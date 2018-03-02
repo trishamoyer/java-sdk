@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -24,8 +24,7 @@ import com.ibm.watson.developer_cloud.util.Validator;
 public class ToneChatOptions extends GenericModel {
 
   /**
-   * The desired language of the response. For two-character arguments, regional variants are treated as their parent
-   * language; for example, `en-US` is interpreted as `en`.
+   * The desired language of the response. For two-character arguments, regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`.
    */
   public interface AcceptLanguage {
     /** ar. */
@@ -159,8 +158,7 @@ public class ToneChatOptions extends GenericModel {
   /**
    * Gets the acceptLanguage.
    *
-   * The desired language of the response. For two-character arguments, regional variants are treated as their parent
-   * language; for example, `en-US` is interpreted as `en`.
+   * The desired language of the response. For two-character arguments, regional variants are treated as their parent language; for example, `en-US` is interpreted as `en`.
    *
    * @return the acceptLanguage
    */
@@ -168,3 +166,4 @@ public class ToneChatOptions extends GenericModel {
     return acceptLanguage;
   }
 }
+
