@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 IBM Corp. All Rights Reserved.
+ * Copyright 2018 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
@@ -31,8 +31,7 @@ public class ConsumptionPreferencesCategory extends GenericModel {
   /**
    * Gets the consumptionPreferenceCategoryId.
    *
-   * The unique identifier of the consumption preferences category to which the results pertain. IDs have the form
-   * `consumption_preferences_{category}`.
+   * The unique identifier of the consumption preferences category to which the results pertain. IDs have the form `consumption_preferences_{category}`.
    *
    * @return the consumptionPreferenceCategoryId
    */
@@ -89,3 +88,4 @@ public class ConsumptionPreferencesCategory extends GenericModel {
     this.consumptionPreferences = consumptionPreferences;
   }
 }
+
